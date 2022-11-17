@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Patient Database</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <!-- input field -->
+        <form action="">
+          <div class="inputField">
+            <h3 class="text-center mt-5">Add Patient</h3>
+            <div class="mb-3 row">
+              <label for="patientId" class="col-sm-2 col-form-label"
+                >Patient Id ::</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="patientId"
+                  placeholder="Enter the patient ID"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="patientId" class="col-sm-2 col-form-label"
+                >First Name ::</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="patientFirstName"
+                  placeholder="Enter the patient first name"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="patientLastName" class="col-sm-2 col-form-label"
+                >Last Name ::</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="patientLastName"
+                  placeholder="Enter the patient last name"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="patientId" class="col-sm-2 col-form-label"
+                >DOB ::</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="date"
+                  class="form-control"
+                  id="patientFirstName"
+                  placeholder="Enter the patient DOB"
+                />
+              </div>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Female
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Unspecified
+              </label>
+            </div>
+            <div class="mb-3 row">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select Primary Insurance</option>
+                <option value="“medicare”">Medicare</option>
+                <option value="pvtinsurance">Private Health Insurance</option>
+              </select>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="address" class="col-sm-2 col-form-label"
+                >Address</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Enter the patient Address"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="contactnum" class="col-sm-2 col-form-label"
+                >Contact Number</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="contactnum"
+                  placeholder="Enter the patient conatct number"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="nextkin" class="col-sm-2 col-form-label"
+                >Next of Kin</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="patientFirstName"
+                  placeholder="Enter the patient next of kin"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!-- Button Field -->
+        <div class="button text-center">
+          <button class="btn btn-primary" onclick="addToDatabase()">
+            Add to the database
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="type.js"></script>
+  </body>
+</html>
