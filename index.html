@@ -68,7 +68,7 @@
                 <input
                   type="date"
                   class="form-control"
-                  id="patientFirstName"
+                  id="patientDOB"
                   placeholder="Enter the patient DOB"
                 />
               </div>
@@ -89,7 +89,7 @@
                 class="form-check-input"
                 type="radio"
                 name="flexRadioDefault"
-                id="flexRadioDefault1"
+                id="male"
               />
               <label class="form-check-label" for="flexRadioDefault1">
                 Female
@@ -100,17 +100,21 @@
                 class="form-check-input"
                 type="radio"
                 name="flexRadioDefault"
-                id="flexRadioDefault1"
+                id="female"
               />
               <label class="form-check-label" for="flexRadioDefault1">
                 Unspecified
               </label>
             </div>
             <div class="mb-3 row">
-              <select class="form-select" aria-label="Default select example">
+              <select
+                id="insuranceSelect"
+                class="form-select"
+                aria-label="Default select example"
+              >
                 <option selected>Select Primary Insurance</option>
                 <option value="“medicare”">Medicare</option>
-                <option value="pvtinsurance">Private Health Insurance</option>
+                <option value="pvtInsurance">Private Health Insurance</option>
               </select>
             </div>
 
@@ -148,22 +152,62 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="patientFirstName"
+                  id="nextOfKin"
                   placeholder="Enter the patient next of kin"
                 />
               </div>
             </div>
           </div>
+
+          <div class="button text-center">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="addToDatabase()"
+            >
+              Add to the database
+            </button>
+          </div>
         </form>
 
-        <!-- Button Field -->
-        <div class="button text-center">
-          <button class="btn btn-primary" onclick="addToDatabase()">
-            Add to the database
+        <!-- Display Field -->
+        <div class="tableDisplay">
+          <button class="btn btn-danger" onclick="displayData()">
+            Display Data
           </button>
+          <table id="displayTable"></table>
+        </div>
+
+        <!-- Edit/Update Field -->
+        <div class="updateField">
+          <button class="btn btn-info" onclick="updateData()">
+            Update Data
+          </button>
+        </div>
+
+        <!-- Delete Field -->
+        <div class="deleteField mt-5">
+          <div class="row">
+            <div class="col">
+              <input
+                id="deleteID"
+                type="number"
+                class="form-control"
+                placeholder="Enter the PatientId to be removed from the database"
+              />
+            </div>
+            <div class="col">
+              <button class="btn btn-danger" onclick="deletePatient(Number)">
+                Delete Patient
+              </button>
+            </div>
+            <div class="col">
+              <p id="deleteMsg">The id doesnt exist</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script src="type.js"></script>
+    <script src="src/type.js"></script>
   </body>
 </html>
