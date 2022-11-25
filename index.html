@@ -17,6 +17,36 @@
   <body>
     <div class="container">
       <div class="wrapper">
+        <!-- Button action field -->
+        <div class="row text-center my-5">
+          <h3>Please select the buttons below to perfrom action</h3>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="addToDatabase()"
+            >
+              Add to the database
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-danger" onclick="displayData()">
+              Display Data
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-danger" onclick="deletePatient(Number)">
+              Delete Patient
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-info" onclick="updateData()">
+              Update Data
+            </button>
+          </div>
+        </div>
         <!-- input field -->
         <form action="">
           <div class="inputField">
@@ -159,31 +189,16 @@
             </div>
           </div>
 
-          <div class="button text-center">
-            <button
-              type="button"
-              class="btn btn-primary"
-              onclick="addToDatabase()"
-            >
-              Add to the database
-            </button>
-          </div>
+          <div class="button text-center"></div>
         </form>
 
         <!-- Display Field -->
         <div class="tableDisplay">
-          <button class="btn btn-danger" onclick="displayData()">
-            Display Data
-          </button>
           <table id="displayTable"></table>
         </div>
 
         <!-- Edit/Update Field -->
-        <div class="updateField">
-          <button class="btn btn-info" onclick="updateData()">
-            Update Data
-          </button>
-        </div>
+        <div class="updateField"></div>
 
         <!-- Delete Field -->
         <div class="deleteField mt-5">
@@ -196,11 +211,7 @@
                 placeholder="Enter the PatientId to be removed from the database"
               />
             </div>
-            <div class="col">
-              <button class="btn btn-danger" onclick="deletePatient(Number)">
-                Delete Patient
-              </button>
-            </div>
+            <div class="col"></div>
             <div class="col">
               <p id="deleteMsg">The id doesnt exist</p>
             </div>
