@@ -20,214 +20,248 @@
         <!-- Button action field -->
         <div class="button">
           <div class="row text-center my-5">
-            <h3>Please select the buttons below to perfrom action</h3>
+            <h3>Please go to the appropriate section to perform the task</h3>
           </div>
-          <div class="row">
-            <div class="col">
-              <button
-                type="button"
-                class="btn btn-primary"
-                onclick="addToDatabase()"
-              >
-                Add to the database
-              </button>
-            </div>
-            <div class="col">
-              <button class="btn btn-danger" onclick="displayData()">
-                Display Data
-              </button>
-            </div>
-            <div class="col">
-              <button class="btn btn-danger" onclick="deletePatient(Number)">
-                Delete Patient
-              </button>
-            </div>
-            <div class="col">
-              <button class="btn btn-info" onclick="updateData()">
-                Update Data
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="message">
-          <p id="message"></p>
         </div>
 
         <!-- input field -->
-        <form action="">
-          <div class="inputField">
-            <h3 class="text-center mt-5">Add Patient</h3>
-            <div class="mb-3 row">
-              <label for="patientId" class="col-sm-2 col-form-label"
-                >Patient Id ::</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="patientId"
-                  placeholder="Enter the patient ID"
-                />
+        <div class="inputform">
+          <form action="">
+            <div class="inputField">
+              <h5 class="text-center mt-5">Add New Patient Form</h5>
+              <p class="text-center">
+                Please use the form below to add the information of the new
+                Patient
+              </p>
+              <div class="mb-3 row">
+                <label for="patientId" class="col-sm-2 col-form-label"
+                  >Patient Id ::</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="patientId"
+                    required
+                    placeholder="Enter the patient ID"
+                  />
+                </div>
+                <div class="col">
+                  <p id="pIdmessage"></p>
+                </div>
               </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="patientId" class="col-sm-2 col-form-label"
-                >First Name ::</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="patientFirstName"
-                  placeholder="Enter the patient first name"
-                />
+              <div class="mb-3 row">
+                <label for="patientId" class="col-sm-2 col-form-label"
+                  >First Name ::</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientFirstName"
+                    required
+                    placeholder="Enter the patient first name"
+                  />
+                </div>
+                <div class="col">
+                  <p id="pFistNamemessage"></p>
+                </div>
               </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="patientLastName" class="col-sm-2 col-form-label"
-                >Last Name ::</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="patientLastName"
-                  placeholder="Enter the patient last name"
-                />
+              <div class="mb-3 row">
+                <label for="patientLastName" class="col-sm-2 col-form-label"
+                  >Last Name ::</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="patientLastName"
+                    required
+                    placeholder="Enter the patient last name"
+                  />
+                </div>
+
+                <div class="row">
+                  <p id="pLastName"></p>
+                </div>
               </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="patientId" class="col-sm-2 col-form-label"
-                >DOB ::</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="date"
-                  class="form-control"
-                  id="patientDOB"
-                  placeholder="Enter the patient DOB"
-                />
+              <div class="mb-3 row">
+                <label for="patientId" class="col-sm-2 col-form-label"
+                  >DOB ::</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    required
+                    type="date"
+                    class="form-control"
+                    id="patientDOB"
+                    placeholder="Enter the patient DOB"
+                  />
+                </div>
+                <div class="row">
+                  <p id="pDob"></p>
+                </div>
               </div>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
-              />
-              <label class="form-check-label" for="flexRadioDefault1">
-                Male
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="male"
-              />
-              <label class="form-check-label" for="flexRadioDefault1">
-                Female
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="female"
-              />
-              <label class="form-check-label" for="flexRadioDefault1">
-                Unspecified
-              </label>
-            </div>
-            <div class="mb-3 row">
-              <select
-                id="insuranceSelect"
-                class="form-select"
-                aria-label="Default select example"
-              >
-                <option selected>Select Primary Insurance</option>
-                <option value="“medicare”">Medicare</option>
-                <option value="pvtInsurance">Private Health Insurance</option>
-              </select>
+
+              <div class="mb-3 row">
+                <select
+                  id="genderSelect"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option selected value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Unspecified">Unspecified</option>
+                </select>
+                <div class="col">
+                  <p id="gender"></p>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <select
+                  id="insuranceSelect"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option selected value="">Select Primary Insurance</option>
+                  <option value="Medicare">Medicare</option>
+                  <option value="Private Health Insurance">
+                    Private Health Insurance
+                  </option>
+                </select>
+                <div class="row">
+                  <p id="insurance"></p>
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="address" class="col-sm-2 col-form-label"
+                  >Address</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="Enter the patient Address"
+                  />
+                </div>
+                <div class="col">
+                  <p id="pAddress"></p>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="contactnum" class="col-sm-2 col-form-label"
+                  >Contact Number</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="contactnum"
+                    placeholder="Enter the patient conatct number"
+                  />
+                </div>
+                <div class="col text-danger">
+                  <p id="pcontact"></p>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="nextkin" class="col-sm-2 col-form-label"
+                  >Next of Kin</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nextOfKin"
+                    placeholder="Enter the patient next of kin"
+                  />
+                </div>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="emergency"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Emergency
+                </label>
+              </div>
+
+              <div class="col text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="addToDatabase()"
+                >
+                  Add New Patient
+                </button>
+              </div>
+
+              <div class="col text-center text-danger">
+                <p id="sucessMsg"></p>
+              </div>
             </div>
 
-            <div class="mb-3 row">
-              <label for="address" class="col-sm-2 col-form-label"
-                >Address</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="address"
-                  placeholder="Enter the patient Address"
-                />
-              </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="contactnum" class="col-sm-2 col-form-label"
-                >Contact Number</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="contactnum"
-                  placeholder="Enter the patient conatct number"
-                />
-              </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="nextkin" class="col-sm-2 col-form-label"
-                >Next of Kin</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nextOfKin"
-                  placeholder="Enter the patient next of kin"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="button text-center"></div>
-        </form>
-
-        <!-- Display Field -->
-        <div class="tableDisplay">
-          <table id="displayTable"></table>
+            <hr />
+          </form>
         </div>
 
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">Patient Id</th>
-              <th scope="col">Patient First Name</th>
-              <th scope="col">Patient Last Name</th>
-              <th scope="col">DOB</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Insurance</th>
-              <th scope="col">Address</th>
-              <th scope="col">Contact Number</th>
-              <th scope="col">Next of Kin</th>
-            </tr>
-          </thead>
-          <tbody id="tabletoshow"></tbody>
-        </table>
+        <!-- Display Field -->
+
+        <div class="displayPatient my-5">
+          <h5 class="text-center mt-2">
+            Display the Patient List from the database
+          </h5>
+          <p class="text-center">
+            Please click the display button to display the list of the patient
+          </p>
+          <div class="col text-center">
+            <button class="btn btn-info my-5" onclick="displayData()">
+              Display Patient
+            </button>
+          </div>
+          <table class="md table">
+            <thead>
+              <tr>
+                <th scope="col">Patient Id</th>
+                <th scope="col">Patient First Name</th>
+                <th scope="col">Patient Last Name</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Insurance</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Next of Kin</th>
+                <th scope="col">Emergency</th>
+              </tr>
+            </thead>
+            <tbody id="tabletoshow"></tbody>
+          </table>
+        </div>
 
         <!-- Edit/Update Field -->
         <div class="updateField"></div>
 
         <!-- Delete Field -->
         <div class="deleteField mt-5">
-          <div class="row">
-            <div class="col">
+          <div class="row text-center mt-5">
+            <h5>Delete the patient infromation from the database</h5>
+            <p>
+              Please enter the patient id to be deleted and press the delete
+              button
+            </p>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="patientId" class="col-sm-2 col-form-label"
+              >Enter the Patient ID to be deleted ::</label
+            >
+            <div class="col-sm-10">
               <input
                 id="deleteID"
                 type="number"
@@ -237,9 +271,95 @@
             </div>
             <div class="col"></div>
             <div class="col">
-              <p id="deleteMsg">The id doesnt exist</p>
+              <p id="deleteMsg"></p>
             </div>
           </div>
+          <div class="col text-center">
+            <button class="btn btn-danger" onclick="deletePatient(Number)">
+              Delete Patient
+            </button>
+          </div>
+        </div>
+
+        <!-- Search Field -->
+        <div class="searchPatient">
+          <div class="text text-center">
+            <h5>Search the Patient</h5>
+            <p>Please enter the Patient Id that needs to be search</p>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="patientId" class="col-sm-2 col-form-label"
+              >Enter the Patient ID to be searched ::</label
+            >
+            <div class="col-sm-10">
+              <input
+                id="searchID"
+                type="number"
+                class="form-control"
+                placeholder="Enter the PatientId to be searched from the database"
+              />
+            </div>
+            <div class="col"></div>
+            <div class="col text-center text-danger">
+              <p id="searchmsg"></p>
+            </div>
+          </div>
+          <div class="col text-center">
+            <button class="btn btn-danger" onclick="searchPatient()">
+              Search Patient
+            </button>
+          </div>
+
+          <table class="md table">
+            <thead>
+              <tr>
+                <th scope="col">Patient Id</th>
+                <th scope="col">Patient First Name</th>
+                <th scope="col">Patient Last Name</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Insurance</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Next of Kin</th>
+                <th scope="col">Emergency</th>
+              </tr>
+            </thead>
+            <tbody id="searchField"></tbody>
+          </table>
+        </div>
+
+        <!-- Dispaly Emergency Field -->
+        <div class="emergencyDisplay">
+          <div class="text text-center">
+            <h5>Dispplay the Emergency Patient</h5>
+            <p>Please click the display button to view the emergency patient</p>
+          </div>
+
+          <div class="col text-center">
+            <button class="btn btn-danger" onclick="displayEmergency()">
+              Display Emergency Patient
+            </button>
+          </div>
+
+          <table class="md table">
+            <thead>
+              <tr>
+                <th scope="col">Patient Id</th>
+                <th scope="col">Patient First Name</th>
+                <th scope="col">Patient Last Name</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Insurance</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Next of Kin</th>
+                <th scope="col">Emergency</th>
+              </tr>
+            </thead>
+            <tbody id="emergencyField"></tbody>
+          </table>
         </div>
       </div>
     </div>

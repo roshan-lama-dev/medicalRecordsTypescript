@@ -1,0 +1,23 @@
+.inputform {
+  background-color: bisque;
+  border-radius: 15px;
+}
+
+.displayPatient {
+  background-color: azure;
+  border-radius: 15px;
+}
+
+.deleteField {
+  background-color: beige;
+  border-radius: 15px;
+  box-shadow: 5ch;
+  min-height: 20px;
+}
+.searchPatient {
+  margin-top: 15px;
+  background-color: blanchedalmond;
+  border-radius: 15px;
+  box-shadow: 5ch;
+  min-height: 20px;
+}
