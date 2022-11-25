@@ -21,3 +21,10 @@
   box-shadow: 5ch;
   min-height: 20px;
 }
+
+.emergencyDisplay {
+  background-color: aliceblue;
+  border-radius: 15px;
+  box-shadow: 5ch;
+  min-height: 20px;
+}
