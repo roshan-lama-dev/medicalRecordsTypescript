@@ -11,7 +11,7 @@
 .deleteField {
   background-color: beige;
   border-radius: 15px;
-  box-shadow: 5ch;
+  /* box-shadow: 5ch; */
   min-height: 20px;
 }
 .searchPatient {
